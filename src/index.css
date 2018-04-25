@@ -12,3 +12,9 @@ body {
   min-width: 1020px;
   word-wrap: break-word;
 }
+
+#root, .App {
+  margin: 0;
+  background-color: #fff;
+  min-width: 1020px;
+}
