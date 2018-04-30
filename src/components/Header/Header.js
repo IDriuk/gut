@@ -17,8 +17,66 @@ class Header extends Component {
           </div>
           <div className="HeaderMenu d-flex flex-justify-between flex-auto">
             <div className="d-flex">
+              <div>
+                <div className="header-search">
+                  <form>
+                    <label className="form-control header-search-wrapper">
+                      <input
+                        className="form-control header-search-input"
+                        placeholder="Search GitHub" ></input>
+                    </label>
+                  </form>
+                </div>
+              </div>
+              <ul className="d-flex pl-2 flex-items-center text-bold list-style-none">
+                <li>
+                  <a className="HeaderNavlink px-2">Pull requests</a>
+                </li>
+                <li>
+                  <a className="HeaderNavlink px-2">Issues</a>
+                </li>
+                <li>
+                  <a className="HeaderNavlink px-2">Marketplace</a>
+                </li>
+                <li>
+                  <a className="HeaderNavlink px-2">Explore</a>
+                </li>
+              </ul>
             </div>
-            <div className="d-flex"></div>
+            <div className="d-flex">
+              <ul className="user-nav d-flex flex-items-center list-style-none">
+                <li className="dropdown">
+                  <span className="d-inline-block  px-2">
+                    <a className="notification-indicator tooltipped">
+                      <svg className="octicon octicon-bell" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true">
+                        <path fillRule="evenodd" d="M14 12v1H0v-1l.73-.58c.77-.77.81-2.55 1.19-4.42C2.69 3.23 6 2 6 2c0-.55.45-1 1-1s1 .45 1 1c0 0 3.39 1.23 4.16 5 .38 1.88.42 3.66 1.19 4.42l.66.58H14zm-7 4c1.11 0 2-.89 2-2H5c0 1.11.89 2 2 2z"></path>
+                      </svg>
+                    </a>
+                  </span>
+                </li>
+                <li className="dropdown">
+                  <details className="d-flex details-reset dropdown-details flex-items-center px-2">
+                    <summary className="HeaderNavlink">
+                      <svg className="octicon octicon-plus float-left mr-1 mt-1" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true">
+                        <path fillRule="evenodd" d="M12 9H7v5H5V9H0V7h5V2h2v5h5z"></path>
+                      </svg>
+                      <span className="dropdown-caret mt-1"></span>
+                    </summary>
+                  </details>
+                </li>
+                <li className="dropdown">
+                  <details className="d-flex details-reset dropdown-details flex-items-center pl-2">
+                    <summary className="HeaderNavlink name mt-1">
+                      <img
+                        className="avatar float-left mr-1"
+                        src="https://avatars0.githubusercontent.com/u/8888039?s=40&v=4"
+                      />
+                      <span className="dropdown-caret"></span>
+                    </summary>
+                  </details>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </header>
