@@ -1,0 +1,73 @@
+.Header {
+  z-index: 1;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  color: rgba(255,255,255,0.75);
+  background-color: #24292e;
+}
+
+.header-logo-invertocat {
+  margin: -1px 15px -1px -2px;
+  color: #fff;
+  white-space: nowrap;
+}
+
+.header-logo-invertocat .octicon-mark-github {
+  float: left;
+}
+
+.header-search {
+  width: 300px;
+  font-size: 13px;
+}
+
+.header-search-wrapper {
+  display: table;
+  width: 100%;
+  max-width: 100%;
+  min-height: 0;
+  padding: 0;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+.Header .header-search-wrapper {
+  min-height: 30px;
+  font-size: inherit;
+  color: #fff;
+  background-color: rgba(255,255,255,0.125);
+  border: 0;
+  box-shadow: none;
+}
+
+.header-search-input {
+  display: table-cell;
+  width: 100%;
+  min-height: 26px;
+  padding-top: 0;
+  padding-bottom: 0;
+  background: none;
+  border: 0;
+  box-shadow: none;
+}
+
+.Header .header-search-input {
+  min-height: 30px;
+  font-size: 16px;
+  color: inherit;
+}
+
+@media (min-width: 1012px) {
+  .Header .header-search-input {
+    font-size: inherit;
+  }
+}
+
+.HeaderNavlink {
+  display: block;
+  color: rgba(255,255,255,0.75);
+}
+
+.user-nav .octicon {
+  width: 16px;
+}

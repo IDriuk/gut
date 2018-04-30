@@ -1,1 +1,132 @@
+.position-relative {
+  position: relative !important;
+}
 
+.float-left {
+  float: left !important;
+}
+
+.container-lg {
+  max-width: 1012px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.d-inline-block {
+  display: inline-block !important;
+}
+
+.d-flex {
+  display: flex !important;
+}
+
+.flex-auto {
+  flex: 1 1 auto !important;
+}
+
+.flex-justify-between {
+  justify-content: space-between !important;
+}
+
+.flex-items-center {
+  align-items: center !important;
+}
+
+.f5 {
+  font-size: 14px !important;
+}
+
+.text-bold {
+  font-weight: 600 !important;
+}
+
+.pl-2 {
+  padding-left: 8px !important;
+}
+
+.px-2 {
+  padding-right: 8px !important;
+  padding-left: 8px !important;
+}
+
+.px-3 {
+  padding-right: 16px !important;
+  padding-left: 16px !important;
+}
+
+.mt-1 {
+  margin-top: 4px !important;
+}
+
+.mr-1 {
+    margin-right: 4px !important;
+}
+
+.octicon {
+  display: inline-block;
+  vertical-align: text-top;
+  fill: currentColor;
+  vertical-align: text-bottom;
+}
+
+.form-control, .form-select {
+  min-height: 34px;
+  padding: 6px 8px;
+  font-size: 16px;
+  line-height: 20px;
+  color: #24292e;
+  vertical-align: middle;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  border: 1px solid #d1d5da;
+  border-radius: 3px;
+  outline: none;
+  box-shadow: inset 0 1px 2px rgba(27,31,35,0.075);
+}
+
+@media (min-width: 768px) {
+  .form-control, .form-select {
+    font-size: 14px;
+  }
+}
+
+.list-style-none {
+  list-style: none !important;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-caret {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  vertical-align: middle;
+  content: "";
+  border: 4px solid;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+
+.tooltipped {
+  position: relative;
+}
+
+.notification-indicator {
+  color: rgba(255,255,255,0.75);
+}
+
+.details-reset > summary {
+  list-style: none;
+}
+
+.avatar {
+  display: inline-block;
+  overflow: hidden;
+  line-height: 1;
+  vertical-align: middle;
+  border-radius: 3px;
+}
