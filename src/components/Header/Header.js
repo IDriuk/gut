@@ -70,6 +70,7 @@ class Header extends Component {
                       <img
                         className="avatar float-left mr-1"
                         src="https://avatars0.githubusercontent.com/u/8888039?s=40&v=4"
+                        alt="@IDriuk"
                       />
                       <span className="dropdown-caret"></span>
                     </summary>
