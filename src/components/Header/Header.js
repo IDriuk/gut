@@ -69,6 +69,8 @@ class Header extends Component {
                     <summary className="HeaderNavlink name mt-1">
                       <img
                         className="avatar float-left mr-1"
+                        height={20}
+                        width={20}
                         src="https://avatars0.githubusercontent.com/u/8888039?s=40&v=4"
                         alt="@IDriuk"
                       />
