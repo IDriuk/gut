@@ -1,0 +1,10 @@
+.user-profile-bio {
+  margin-bottom: 12px;
+  overflow: hidden;
+  font-size: 14px;
+  color: #6a737d;
+}
+
+.vcard-details {
+  list-style: none;
+}
