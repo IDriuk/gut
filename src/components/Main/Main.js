@@ -14,7 +14,7 @@ class Main extends Component {
                   src="https://avatars1.githubusercontent.com/u/8888039?s=460&v=4"
                   width={230}
                   height={230}
-                  alt
+                  alt=""
                 />
               </a>
               <div className="py-3">
