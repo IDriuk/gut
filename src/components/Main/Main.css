@@ -8,3 +8,39 @@
 .vcard-details {
   list-style: none;
 }
+
+.vcard-detail {
+  padding-left: 22px;
+  font-size: 14px;
+}
+
+.vcard-names {
+  line-height: 1;
+}
+
+.vcard-fullname {
+  font-size: 26px;
+  line-height: 30px;
+}
+
+.vcard-username {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 24px;
+  color: #666;
+}
+
+.vcard-details .css-truncate.css-truncate-target {
+  width: 100%;
+  max-width: 100%;
+}
+
+.vcard-detail .octicon {
+  float: left;
+  width: 16px;
+  margin-top: 3px;
+  margin-left: -22px;
+  color: #6a737d;
+  text-align: center;
+}
