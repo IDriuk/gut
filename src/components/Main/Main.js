@@ -10,7 +10,7 @@ class Main extends Component {
             <div className="h-card col-3 float-left pr-3">
               <a className="u-photo d-block tooltipped tooltipped-s">
                 <img
-                  class="avatar width-full rounded-2"
+                  className="avatar width-full rounded-2"
                   src="https://avatars1.githubusercontent.com/u/8888039?s=460&v=4"
                   width={230}
                   height={230}
