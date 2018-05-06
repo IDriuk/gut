@@ -38,7 +38,23 @@ class Main extends Component {
                 </li>
               </ul>
             </div>
-            <div className="col-9 float-left pl-2"></div>
+
+            <div className="col-9 float-left pl-2">
+              <div className="UnderlineNav top-0 user-profile-nav">
+                <nav className="UnderlineNav-body">
+                  {
+                    ["Overview", "Repositories", "Stars", "Followers", "Following"]
+                      .map((title, index) =>
+                        <a key={index} className={`UnderlineNav-item ${index === 0 ? "selected" : ""}`}>
+                          {title} &nbsp;
+                          {index > 0 && <span className="Counter">{index}</span>}
+                        </a>)
+                  }
+                </nav>
+              </div>
+              <div className="position-relative"></div>
+            </div>
+
           </div>
         </div>
       </div>

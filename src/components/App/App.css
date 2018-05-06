@@ -110,6 +110,10 @@
   margin-bottom: 16px !important;
 }
 
+.top-0 {
+  top: 0 !important;
+}
+
 .border-gray-light {
   border-color: #eaecef !important;
 }
