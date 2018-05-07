@@ -52,7 +52,18 @@ class Main extends Component {
                   }
                 </nav>
               </div>
-              <div className="position-relative"></div>
+
+              <div className="position-relative">
+                <div className="mt-4">
+                  <div>
+                    <details className="details-reset">
+                      <summary className="btn-link muted-link float-right mt-1 pinned-repos-setting-link">Customize your pinned repositories</summary>
+                    </details>
+                    <h2 className="f4 mb-2 text-normal">Pinned repositories</h2>
+                  </div>
+                </div>
+              </div>
+
             </div>
 
           </div>
