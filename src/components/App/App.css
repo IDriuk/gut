@@ -67,8 +67,20 @@
   font-weight: 600 !important;
 }
 
+.text-small {
+  font-size: 12px !important;
+}
+
 .text-normal {
   font-weight: 400 !important;
+}
+
+.text-gray {
+  color: #586069 !important;
+}
+
+.p-3 {
+  padding: 16px !important;
 }
 
 .pt-1 {
@@ -77,6 +89,10 @@
 
 .pl-2 {
   padding-left: 8px !important;
+}
+
+.pr-2 {
+  padding-right: 8px !important;
 }
 
 .pr-3 {
@@ -102,12 +118,20 @@
   margin-top: 4px !important;
 }
 
+.mt-2 {
+  margin-top: 8px !important;
+}
+
 .mt-4 {
   margin-top: 24px !important;
 }
 
 .mr-1 {
   margin-right: 4px !important;
+}
+
+.mb-0 {
+  margin-bottom: 0 !important;
 }
 
 .mb-2 {
@@ -118,16 +142,32 @@
   margin-bottom: 16px !important;
 }
 
+.mb-4 {
+  margin-bottom: 24px !important;
+}
+
 .top-0 {
   top: 0 !important;
+}
+
+.border-top {
+  border-top: 1px #e1e4e8 solid !important;
+}
+
+.border {
+  border: 1px #e1e4e8 solid !important;
 }
 
 .border-gray-light {
   border-color: #eaecef !important;
 }
 
-.border-top {
-  border-top: 1px #e1e4e8 solid !important;
+.border-gray-dark {
+  border-color: #d1d5da !important;
+}
+
+.rounded-1 {
+  border-radius: 3px !important;
 }
 
 .rounded-2 {
@@ -189,6 +229,10 @@
 
 .f5 {
   font-size: 14px !important;
+}
+
+.f6 {
+  font-size: 12px !important;
 }
 
 .btn {

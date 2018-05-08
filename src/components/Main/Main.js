@@ -60,6 +60,32 @@ class Main extends Component {
                       <summary className="btn-link muted-link float-right mt-1 pinned-repos-setting-link">Customize your pinned repositories</summary>
                     </details>
                     <h2 className="f4 mb-2 text-normal">Pinned repositories</h2>
+                    <form>
+                      <ol className="mb-4 pinned-repos-list">
+                        <li className="border border-gray-dark mb-3 p-3 pinned-repo-item public reorderable rounded-1 sortable-button-item source">
+                          <div className="pinned-repo-item-content">
+                            <span className="d-block position-relative">
+                              <span className="float-left pinned-repository-handle pr-2">
+                                <svg className="octicon octicon-grabber" viewBox="0 0 8 16" version="1.1" width="8" height="16" aria-hidden="true">
+                                  <path fillRule="evenodd" d="M8 4v1H0V4h8zM0 8h8V7H0v1zm0 3h8v-1H0v1z"></path>
+                                </svg>
+                              </span>
+                              <a className="text-bold">
+                                <span className="repo">gut</span>
+                              </a>
+                            </span>
+                            <p className="pinned-repo-desc text-gray text-small d-block mt-2 mb-3">reverse engineering of github frontend</p>
+                            <p className="mb-0 f6 text-gray">
+                              <span
+                                className="repo-language-color pinned-repo-meta"
+                                style={{backgroundColor: "#f1e05a"}}
+                              ></span>
+                              JavaScript
+                            </p>
+                          </div>
+                        </li>
+                      </ol>
+                    </form>
                   </div>
                 </div>
               </div>
