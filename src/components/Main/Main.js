@@ -55,6 +55,7 @@ class Main extends Component {
 
               <div className="position-relative">
                 <div className="mt-4">
+
                   <div>
                     <details className="details-reset">
                       <summary className="btn-link muted-link float-right mt-1 pinned-repos-setting-link">Customize your pinned repositories</summary>
@@ -96,6 +97,18 @@ class Main extends Component {
                       </ol>
                     </form>
                   </div>
+
+                  <div className="js-contribution-graph ">
+                    <div className="contributions-setting float-right">
+                      <button className="btn-link contributions-setting-link muted-link select-menu-button">
+                        Contribution settings
+                      </button>
+                    </div>
+                    <h2 className="f4 text-normal mb-2">
+                      594 contributions in the last year
+                    </h2>
+                  </div>
+
                 </div>
               </div>
 
