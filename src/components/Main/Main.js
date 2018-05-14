@@ -612,7 +612,22 @@ class Main extends Component {
                         </svg>
 
                       </div>
-                      <div className="contrib-footer clearfix mt-1 mx-3 px-3 pb-1"></div>
+                      <div className="contrib-footer clearfix mt-1 mx-3 px-3 pb-1">
+                        <div className="float-left text-gray">
+                          <a>Learn how we count contributions</a>
+                        </div>
+                        <div className="contrib-legend text-gray">
+                          Less
+                          <ul className="legend">
+                            <li style={{backgroundColor: "#eee"}} ></li>&nbsp;
+                            <li style={{backgroundColor: "#c6e48b"}} ></li>&nbsp;
+                            <li style={{backgroundColor: "#7bc96f"}} ></li>&nbsp;
+                            <li style={{backgroundColor: "#239a3b"}} ></li>&nbsp;
+                            <li style={{backgroundColor: "#196127"}} ></li>&nbsp;
+                          </ul>
+                          More
+                        </div>
+                      </div>
                     </div>
 
                   </div>
