@@ -27,6 +27,10 @@
   margin-left: auto;
 }
 
+.col-2 {
+  width: 16.66667%;
+}
+
 .col-3 {
   width: 25%;
 }
@@ -89,6 +93,10 @@
 
 .pl-2 {
   padding-left: 8px !important;
+}
+
+.pl-5 {
+  padding-left: 32px !important;
 }
 
 .pr-2 {
