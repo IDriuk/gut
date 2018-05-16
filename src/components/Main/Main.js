@@ -636,11 +636,20 @@ class Main extends Component {
                     <ul className="filter-list small">
                       {[8, 7, 6, 5, 4].map(i =>
                         <li key={i} >
-                          <a className={`filter-item mb-2 px-3 py-2 ${i===8 ? "selected" : ""}`}>201{i}</a> 
+                          <a className={`filter-item mb-2 px-3 py-2 ${i===8 ? "selected" : ""}`}>201{i}</a>
                         </li>
                       )}
                     </ul>
                   </div>
+
+                  <h2 className="f4 text-normal mb-2">
+                    Contribution activity
+                    <span className="contributions-setting dropdown float-right">
+                      <button className="btn-link contributions-setting-link muted-link select-menu-button text-normal">
+                        Jump to
+                      </button>
+                    </span>
+                  </h2>
 
                 </div>
               </div>
