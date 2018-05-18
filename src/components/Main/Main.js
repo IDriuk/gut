@@ -153,6 +153,16 @@ class Main extends Component {
                     </span>
                   </h2>
 
+                  <div
+                    className="activity-listing contribution-activity"
+                    style={{minHeight: 210}}
+                  >
+                    <div className="col-10 contribution-activity-listing float-left">
+                      <div className="profile-timeline discussion-timeline width-full pb-4">
+                      </div>
+                    </div>
+                  </div>
+
                 </div>
               </div>
 

@@ -213,3 +213,30 @@
   margin: 0 0 2px;
   font-size: 12px;
 }
+
+.discussion-timeline {
+  position: relative;
+  float: left;
+  width: 760px;
+}
+
+.profile-timeline.discussion-timeline {
+  float: none;
+}
+
+.discussion-timeline::before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 79px;
+  z-index: -1;
+  display: block;
+  width: 2px;
+  content: "";
+  background-color: #e6ebf1;
+}
+
+.profile-timeline.discussion-timeline::before {
+  left: 15px;
+  background-color: #eaecef;
+}
