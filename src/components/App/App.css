@@ -129,6 +129,11 @@
   padding-left: 16px !important;
 }
 
+.py-1 {
+  padding-top: 4px !important;
+  padding-bottom: 4px !important;
+}
+
 .py-2 {
   padding-top: 8px !important;
   padding-bottom: 8px !important;
@@ -180,6 +185,14 @@
   margin-left: 16px !important;
 }
 
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-weight: 600 !important;
+}
+
+.h6 {
+  font-size: 12px !important;
+}
+
 .top-0 {
   top: 0 !important;
 }
@@ -202,6 +215,10 @@
 
 .border-gray-dark {
   border-color: #d1d5da !important;
+}
+
+.bg-white {
+  background-color: #fff !important;
 }
 
 .rounded-1 {
