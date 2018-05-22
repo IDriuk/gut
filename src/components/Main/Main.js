@@ -160,7 +160,7 @@ class Main extends Component {
                     <div className="col-10 contribution-activity-listing float-left">
                       <div className="profile-timeline discussion-timeline width-full pb-4">
                         <h3 className="profile-timeline-month-heading bg-white d-inline-block h6 pr-2 py-1">
-                          May <span className="text-gray"> 2018</span>
+                          May <span className="text-gray"> 2018</span> &shy;
                         </h3>
                       </div>
                     </div>
