@@ -99,6 +99,10 @@
   padding-left: 8px !important;
 }
 
+.pl-4 {
+  padding-left: 24px !important;
+}
+
 .pl-5 {
   padding-left: 32px !important;
 }
@@ -144,6 +148,11 @@
   padding-bottom: 16px !important;
 }
 
+.py-4 {
+  padding-top: 24px !important;
+  padding-bottom: 24px !important;
+}
+
 .mt-1 {
   margin-top: 4px !important;
 }
@@ -158,6 +167,10 @@
 
 .mr-1 {
   margin-right: 4px !important;
+}
+
+.ml-3 {
+  margin-left: 16px !important;
 }
 
 .mb-0 {
@@ -249,7 +262,6 @@
 
 .octicon {
   display: inline-block;
-  vertical-align: text-top;
   fill: currentColor;
   vertical-align: text-bottom;
 }
@@ -369,4 +381,12 @@
   line-height: 1;
   vertical-align: middle;
   border-radius: 3px;
+}
+
+.lh-condensed {
+  line-height: 1.25 !important;
+}
+
+.no-underline {
+  text-decoration: none !important;
 }
