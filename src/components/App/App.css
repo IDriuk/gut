@@ -35,6 +35,10 @@
   width: 25%;
 }
 
+.col-8 {
+  width: 66.66667%;
+}
+
 .col-9 {
   width: 75%;
 }
@@ -167,6 +171,14 @@
 
 .mr-1 {
   margin-right: 4px !important;
+}
+
+.ml-0 {
+  margin-left: 0 !important;
+}
+
+.ml-1 {
+  margin-left: 4px !important;
 }
 
 .ml-3 {

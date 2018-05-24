@@ -269,3 +269,39 @@
 .profile-rollup-wrapper.open .profile-rollup-toggle-closed {
   display: block;
 }
+
+.profile-rollup-wrapper.open > .profile-rollup-content {
+  display: block;
+}
+
+.profile-rollup-wrapper .css-truncate-target {
+  max-width: 85%;
+}
+
+.progress-bar {
+  display: block;
+  height: 15px;
+  overflow: hidden;
+  background-color: #eaecef;
+  border-radius: 3px;
+}
+
+.profile-rollup-wrapper .progress-bar {
+  height: 8px;
+  border-radius: 2px;
+}
+
+.anim-grow-x {
+  width: 0%;
+  animation-name: grow-x;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease;
+  animation-delay: 0.5s;
+}
+
+@keyframes grow-x {
+  100% {
+    width: 100%;
+  }
+}

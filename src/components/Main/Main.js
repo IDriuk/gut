@@ -180,6 +180,23 @@ class Main extends Component {
                               </span>
                             </span>
                           </button>
+                          <ul className="profile-rollup-content list-style-none">
+                            <li className="ml-0 py-1">
+                              <div className="d-inline-block col-8 css-truncate css-truncate-target lh-condensed">
+                                <a>IDriuk/gut</a>
+                                <a className="f6 muted-link ml-1">38 commits</a>
+                              </div>
+                              <div className="col-3 d-inline-block float-right">
+                                <div
+                                  style={{width: "100%"}}
+                                  className="tooltipped tooltipped-n">
+                                  <span
+                                    style={{backgroundColor: "#196127"}}
+                                    className="d-flex anim-grow-x progress-bar mt-1"></span>
+                                </div>
+                              </div>
+                            </li>
+                          </ul>
                         </div>
                       </div>
                     </div>
