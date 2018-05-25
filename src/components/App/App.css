@@ -67,8 +67,16 @@
   justify-content: space-between !important;
 }
 
+.flex-justify-center {
+  justify-content: center !important;
+}
+
 .flex-items-center {
   align-items: center !important;
+}
+
+.flex-wrap {
+  flex-wrap: wrap !important;
 }
 
 .overflow-hidden {
@@ -91,12 +99,20 @@
   color: #586069 !important;
 }
 
+.text-gray-light {
+  color: #6a737d !important;
+}
+
 .p-3 {
   padding: 16px !important;
 }
 
 .pt-1 {
   padding-top: 4px !important;
+}
+
+.pt-6 {
+  padding-top: 40px !important;
 }
 
 .pl-2 {
@@ -123,8 +139,16 @@
   padding-bottom: 4px !important;
 }
 
+.pb-2 {
+  padding-bottom: 8px !important;
+}
+
 .pb-4 {
   padding-bottom: 24px !important;
+}
+
+.pb-6 {
+  padding-bottom: 40px !important;
 }
 
 .px-2 {
@@ -173,8 +197,16 @@
   margin-top: 24px !important;
 }
 
+.mt-6 {
+  margin-top: 40px !important;
+}
+
 .mr-1 {
   margin-right: 4px !important;
+}
+
+.mr-3 {
+  margin-right: 16px !important;
 }
 
 .ml-0 {
