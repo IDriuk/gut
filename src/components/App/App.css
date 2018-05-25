@@ -157,6 +157,10 @@
   padding-bottom: 24px !important;
 }
 
+.mt-0 {
+  margin-top: 0 !important;
+}
+
 .mt-1 {
   margin-top: 4px !important;
 }
@@ -351,6 +355,12 @@
   background-color: transparent;
   border: 0;
   appearance: none;
+}
+
+.btn-outline {
+  color: #0366d6;
+  background-color: #fff;
+  background-image: none;
 }
 
 .list-style-none {

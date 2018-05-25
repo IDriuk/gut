@@ -200,6 +200,18 @@ class Main extends Component {
                         </div>
                       </div>
                     </div>
+
+                    <form className="col-10">
+                      <button className="border-gray-dark btn btn-outline contribution-activity-show-more f6 mt-0 py-2 width-full">
+                        Show more activity
+                      </button>
+                      <p className="text-gray f6 mt-4">
+                        Seeing something unexpected? Take a look at the &nbsp;
+                        <a>GitHub profile guide</a>
+                        .
+                      </p>
+                    </form>
+
                   </div>
 
                 </div>
