@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './Main.css';
 
+import UnderlineNav from '../UnderlineNav/UnderlineNav';
 import CalendarGraph from './CalendarGraph';
 
 class Main extends Component {
@@ -42,18 +43,7 @@ class Main extends Component {
             </div>
 
             <div className="col-9 float-left pl-2">
-              <div className="UnderlineNav top-0 user-profile-nav">
-                <nav className="UnderlineNav-body">
-                  {
-                    ["Overview", "Repositories", "Stars", "Followers", "Following"]
-                      .map((title, index) =>
-                        <a key={index} className={`UnderlineNav-item ${index === 0 ? "selected" : ""}`}>
-                          {title} &nbsp;
-                          {index > 0 && <span className="Counter">{index}</span>}
-                        </a>)
-                  }
-                </nav>
-              </div>
+              <UnderlineNav />
 
               <div className="position-relative">
                 <div className="mt-4">
@@ -91,6 +81,7 @@ class Main extends Component {
                                 className="repo-language-color pinned-repo-meta"
                                 style={{backgroundColor: "#f1e05a"}}
                               ></span>
+                              &nbsp;
                               {language}
                             </p>
                           </div>
