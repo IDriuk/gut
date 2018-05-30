@@ -71,3 +71,8 @@
 .user-nav .octicon {
   width: 16px;
 }
+
+/* trick: enable "Show user agent shadow DOM" in chrome dev tools */
+.Header .header-search-input::placeholder {
+  color: rgba(255,255,255,0.75);
+}

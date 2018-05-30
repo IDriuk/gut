@@ -444,3 +444,12 @@
 .no-underline {
   text-decoration: none !important;
 }
+
+::-webkit-input-placeholder {
+  color: inherit;
+  opacity: 0.54;
+}
+
+::placeholder {
+  color: #6a737d;
+}
