@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './Header.css';
 
+import searchShortcutHint from '../../assets/images/search-shortcut-hint.svg';
+
 class Header extends Component {
   render() {
     return (
@@ -20,10 +22,16 @@ class Header extends Component {
               <div>
                 <div className="header-search">
                   <form>
-                    <label className="form-control header-search-wrapper">
+                    <label className="d-flex flex-items-center flex-justify-between form-control header-search-wrapper header-search-wrapper-jump-to position-relative">
                       <input
                         className="form-control header-search-input"
-                        placeholder="Search GitHub" ></input>
+                        placeholder="Search or jump to…"
+                      ></input>
+                      <img
+                        className="mr-2 header-search-key-slash"
+                        src={searchShortcutHint}
+                        alt="search-shortcut-hint"
+                      ></img>
                     </label>
                   </form>
                 </div>
