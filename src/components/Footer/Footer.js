@@ -9,7 +9,7 @@ class Footer extends Component {
         <div className="position-relative d-flex flex-justify-between pt-6 pb-2 mt-6 f6 text-gray border-top border-gray-light ">
           <ul className="list-style-none d-flex flex-wrap">
             <li className="mr-3">
-              © 2018
+              © 2018&nbsp;
               <span>GitHub</span>
               , Inc.
             </li>
