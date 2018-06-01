@@ -68,6 +68,12 @@
   color: rgba(255,255,255,0.75);
 }
 
+.HeaderNavlink:hover,
+.HeaderNavlink:focus {
+  color: #fff;
+  text-decoration: none;
+}
+
 .user-nav .octicon {
   width: 16px;
 }
