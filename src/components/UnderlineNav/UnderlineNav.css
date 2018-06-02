@@ -25,6 +25,13 @@
   border-bottom-color: #e36209;
 }
 
+.UnderlineNav-item:hover {
+  color: #24292e;
+  text-decoration: none;
+  border-bottom-color: #d1d5da;
+  transition: 0.2s ease;
+}
+
 .Counter {
   display: inline-block;
   padding: 2px 5px;
