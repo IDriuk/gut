@@ -302,6 +302,11 @@
   color: #586069 !important;
 }
 
+.muted-link:hover {
+  color: #0366d6 !important;
+  text-decoration: none;
+}
+
 .css-truncate.css-truncate-target,
 .css-truncate .css-truncate-target {
   display: inline-block;

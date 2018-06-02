@@ -91,6 +91,10 @@
   color: #586069;
 }
 
+.pinned-repo-item .pinned-repository-handle:hover {
+  cursor: grab;
+}
+
 .contributions-setting .contributions-setting-link {
   font-size: 13px;
 }
