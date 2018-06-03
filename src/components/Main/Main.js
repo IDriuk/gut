@@ -139,7 +139,7 @@ class Main extends Component {
                     Contribution activity
                     <span className="contributions-setting dropdown float-right">
                       <button className="btn-link contributions-setting-link muted-link select-menu-button text-normal">
-                        Jump to
+                        Jump to &shy;
                       </button>
                     </span>
                   </h2>
