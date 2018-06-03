@@ -197,7 +197,7 @@ class Main extends Component {
                         Show more activity
                       </button>
                       <p className="text-gray f6 mt-4">
-                        Seeing something unexpected? Take a look at the &nbsp;
+                        Seeing something unexpected? Take a look at the &shy;
                         <a>GitHub profile guide</a>
                         .
                       </p>
