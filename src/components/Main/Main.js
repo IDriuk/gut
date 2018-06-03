@@ -192,8 +192,8 @@ class Main extends Component {
                       </div>
                     </div>
 
-                    <form className="col-10">
-                      <button className="border-gray-dark btn btn-outline contribution-activity-show-more f6 mt-0 py-2 width-full">
+                    <form className="col-10 ajax-pagination-form">
+                      <button className="border-gray-dark btn btn-outline contribution-activity-show-more f6 mt-0 py-2 width-full ajax-pagination-btn">
                         Show more activity
                       </button>
                       <p className="text-gray f6 mt-4">
