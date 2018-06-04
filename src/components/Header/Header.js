@@ -80,7 +80,7 @@ class Header extends Component {
                   </details>
                 </li>
                 <li className="dropdown">
-                  <details className="d-flex details-reset dropdown-details flex-items-center pl-2">
+                  <details className="details-expanded d-flex details-reset dropdown-details flex-items-center pl-2">
                     <summary className="HeaderNavlink name mt-1">
                       <img
                         className="avatar float-left mr-1"
@@ -91,6 +91,34 @@ class Header extends Component {
                       />
                       <span className="dropdown-caret"></span>
                     </summary>
+                    <ul className="dropdown-menu dropdown-menu-sw">
+                      <li className="dropdown-header header-nav-current-user css-truncate">
+                        Signed in as &shy;
+                        <strong className="css-truncate-target">IDriuk</strong>
+                      </li>
+                      <li className="dropdown-divider"></li>
+                      <li>
+                        <a className="dropdown-item">Your profile</a>
+                      </li>
+                      <li>
+                        <a className="dropdown-item">Your stars</a>
+                      </li>
+                      <li>
+                        <a className="dropdown-item">Your gists</a>
+                      </li>
+                      <li className="dropdown-divider"></li>
+                      <li>
+                        <a className="dropdown-item">Help</a>
+                      </li>
+                      <li>
+                        <a className="dropdown-item">Settings</a>
+                      </li>
+                      <li>
+                        <form className="logout-form">
+                          <button type="submit" className="dropdown-item dropdown-signout">Sign out</button>
+                        </form>
+                      </li>
+                    </ul>
                   </details>
                 </li>
               </ul>
