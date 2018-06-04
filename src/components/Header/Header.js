@@ -63,6 +63,7 @@ class Header extends Component {
                   </span>
                 </li>
                 <li className="dropdown">
+                  {/* trick: details on click automatically add open atribut */}
                   <details className="d-flex details-reset dropdown-details flex-items-center px-2">
                     <summary className="HeaderNavlink">
                       <svg className="octicon octicon-plus float-left mr-1 mt-1" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true">
@@ -70,6 +71,12 @@ class Header extends Component {
                       </svg>
                       <span className="dropdown-caret mt-1"></span>
                     </summary>
+                    <ul className="dropdown-menu dropdown-menu-sw">
+                      <a className="dropdown-item">New repository</a>
+                      <a className="dropdown-item">Import repository</a>
+                      <a className="dropdown-item">New gist</a>
+                      <a className="dropdown-item">New organization</a>
+                    </ul>
                   </details>
                 </li>
                 <li className="dropdown">
