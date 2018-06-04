@@ -468,6 +468,26 @@ details:not([open]) > *:not(summary) {
 
 .details-reset > summary::-webkit-details-marker { display: none; }
 
+.details-reset > summary::before {
+  display: none;
+}
+
+details > summary:focus {
+  outline-color: #24292e;
+}
+
+.details-expanded[open] > summary::before {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 99;
+  display: block;
+  cursor: default;
+  content: " ";
+  background: transparent;
+}
 
 .avatar {
   display: inline-block;
