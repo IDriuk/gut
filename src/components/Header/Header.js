@@ -7,11 +7,11 @@ class Header extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {searchActive: false};
+    this.state = {searchActive: false, focusSuggestion: false};
   }
 
   render() {
-    const { searchActive } = this.state;
+    const { searchActive, focusSuggestion } = this.state;
 
     return (
       <header className="Header  f5">
@@ -32,16 +32,39 @@ class Header extends Component {
                   <form>
                     <label className="d-flex flex-items-center flex-justify-between form-control header-search-wrapper header-search-wrapper-jump-to position-relative">
                       <input
-                        className={`form-control header-search-input ${searchActive ? "jump-to-field-active" : "" }`}
+                        className={`form-control header-search-input ${searchActive ? "jump-to-field-active jump-to-field-active-non-empty" : "" }`}
                         placeholder="Search or jump to…"
                         onFocus={() => this.setState({searchActive: true})}
-                        onBlur={() => this.setState({searchActive: false})}
+                        onBlur={() => this.setState({searchActive: false, focusSuggestion: false})}
                       ></input>
                       <img
                         className="mr-2 header-search-key-slash"
                         src={searchShortcutHint}
                         alt="search-shortcut-hint"
                       ></img>
+                      <div className={`Box jump-to-suggestions overflow-hidden position-absolute ${searchActive ? "" : "d-none"}`}>
+                        <ul className="jump-to-suggestions-results-container">
+                          {["IDriuk/gut",
+                            "primer/primer",
+                            "IDriuk/cloud",
+                            "IDriuk/m_gut",
+                            "IDriuk/yalp"].map(name =>
+                          <li
+                            key={name}
+                            className={`d-flex f5 flex-items-center flex-justify-start navigation-item p-0 ${focusSuggestion === name ? "navigation-focus" : ""}`}
+                            onMouseOver={()=>this.setState({focusSuggestion: name})}
+                          >
+                            <a className="d-flex flex-auto flex-items-center jump-to-suggestions-path no-underline p-2">
+                              <div className="jump-to-octicon mr-2 text-center">
+                                <svg height="16" width="16" className="octicon octicon-repo flex-shrink-0 js-jump-to-repo-octicon-template" title="Repository" viewBox="0 0 12 16" version="1.1" aria-hidden="true">
+                                  <path fillRule="evenodd" d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z"></path>
+                                </svg>
+                              </div>
+                              <div className="css-truncate css-truncate-target flex-auto jump-to-suggestion-name no-wrap overflow-hidden">{name}</div>
+                            </a>
+                          </li>)}
+                        </ul>
+                      </div>
                     </label>
                   </form>
                 </div>

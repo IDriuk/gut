@@ -2,6 +2,10 @@
   position: relative !important;
 }
 
+.position-absolute {
+  position: absolute !important;
+}
+
 .float-left {
   float: left !important;
 }
@@ -59,8 +63,16 @@
   display: flex !important;
 }
 
+.d-none {
+  display: none !important;
+}
+
 .flex-auto {
   flex: 1 1 auto !important;
+}
+
+.flex-justify-start {
+  justify-content: flex-start !important;
 }
 
 .flex-justify-between {
@@ -79,8 +91,20 @@
   flex-wrap: wrap !important;
 }
 
+.flex-shrink-0 {
+  flex-shrink: 0 !important;
+}
+
 .overflow-hidden {
   overflow: hidden !important;
+}
+
+.no-wrap {
+  white-space: nowrap !important;
+}
+
+.text-center {
+  text-align: center !important;
 }
 
 .text-bold {
@@ -101,6 +125,14 @@
 
 .text-gray-light {
   color: #6a737d !important;
+}
+
+.p-0 {
+  padding: 0 !important;
+}
+
+.p-2 {
+  padding: 8px !important;
 }
 
 .p-3 {
