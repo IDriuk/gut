@@ -181,3 +181,11 @@
   background: none;
   border: 0;
 }
+
+.header-search-input:focus ~ .header-search-key-slash {
+  display: none;
+}
+
+.jump-to-field-active ~ .header-search-key-slash {
+  display: none;
+}
