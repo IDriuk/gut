@@ -189,3 +189,12 @@
 .jump-to-field-active ~ .header-search-key-slash {
   display: none;
 }
+
+.jump-to-field-active {
+  color: #24292e !important;
+  background-color: #fafbfc;
+}
+
+.jump-to-field-active::placeholder {
+  color: #586069 !important;
+}

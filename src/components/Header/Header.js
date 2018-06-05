@@ -4,7 +4,15 @@ import './Header.css';
 import searchShortcutHint from '../../assets/images/search-shortcut-hint.svg';
 
 class Header extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {searchActive: false};
+  }
+
   render() {
+    const { searchActive } = this.state;
+
     return (
       <header className="Header  f5">
         <div className="d-flex flex-justify-between px-3 container-lg">
@@ -24,8 +32,10 @@ class Header extends Component {
                   <form>
                     <label className="d-flex flex-items-center flex-justify-between form-control header-search-wrapper header-search-wrapper-jump-to position-relative">
                       <input
-                        className="form-control header-search-input"
+                        className={`form-control header-search-input ${searchActive ? "jump-to-field-active" : "" }`}
                         placeholder="Search or jump to…"
+                        onFocus={() => this.setState({searchActive: true})}
+                        onBlur={() => this.setState({searchActive: false})}
                       ></input>
                       <img
                         className="mr-2 header-search-key-slash"
