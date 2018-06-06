@@ -253,3 +253,7 @@
 .jump-to-suggestions-results-container .navigation-focus .d-on-nav-focus {
   display: block;
 }
+
+.jump-to-suggestions-results-container .navigation-focus .jump-to-octicon {
+  color: #fff;
+}

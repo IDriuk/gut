@@ -62,7 +62,7 @@ class Header extends Component {
                               </div>
                               <div className="css-truncate css-truncate-target flex-auto jump-to-suggestion-name no-wrap overflow-hidden">{name}</div>
                               <div className="border rounded-1 flex-shrink-0 bg-gray px-1 text-gray-light ml-1 f6 d-on-nav-focus js-jump-to-badge-jump">
-                                Jump to
+                                Jump to&nbsp;
                                 <span className="d-inline-block ml-1 v-align-middle">↵</span>
                               </div>
                             </a>
