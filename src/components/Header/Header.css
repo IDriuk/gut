@@ -245,3 +245,11 @@
   color: #fff;
   background: #0366d6;
 }
+
+.jump-to-suggestions-results-container .d-on-nav-focus {
+  display: none;
+}
+
+.jump-to-suggestions-results-container .navigation-focus .d-on-nav-focus {
+  display: block;
+}

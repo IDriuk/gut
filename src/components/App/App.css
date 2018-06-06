@@ -103,6 +103,10 @@
   white-space: nowrap !important;
 }
 
+.v-align-middle {
+  vertical-align: middle !important;
+}
+
 .text-center {
   text-align: center !important;
 }
@@ -181,6 +185,11 @@
 
 .pb-6 {
   padding-bottom: 40px !important;
+}
+
+.px-1 {
+  padding-right: 4px !important;
+  padding-left: 4px !important;
 }
 
 .px-2 {
@@ -316,6 +325,10 @@
 
 .bg-white {
   background-color: #fff !important;
+}
+
+.bg-gray {
+  background-color: #f6f8fa !important;
 }
 
 .rounded-1 {
