@@ -5,7 +5,15 @@ import UnderlineNav from '../UnderlineNav/UnderlineNav';
 import CalendarGraph from './CalendarGraph';
 
 class Main extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {editBio: false};
+  }
+
   render() {
+    const {editBio} = this.state;
+
     return (
       <div className="application-main ">
         <div>
@@ -26,12 +34,35 @@ class Main extends Component {
                   <span className="p-nickname vcard-username d-block">IDriuk</span>
                 </h1>
               </div>
-              <div className="mb-3 user-profile-bio">
+              {!editBio && <div className="mb-3 user-profile-bio">
                 <div className="d-inline-block mb-3">
                   <div>React.js developer from Poltava</div>
                 </div>
-                <button className="btn width-full">Edit bio</button>
-              </div>
+                <button
+                  className="btn width-full"
+                  onClick={() => this.setState({editBio: true})}
+                >Edit bio</button>
+              </div>}
+              {editBio && <form className="mb-3">
+                <div>
+                  <textarea
+                    className="form-control mb-2 width-full"
+                    placeholder="Add a bio"
+                    rows="5"
+                    defaultValue="React.js developer from Poltava"
+                  ></textarea>
+                  <div className="d-flex flex-justify-between flex-items-center">
+                    <div>
+                      <button type="submit" className="btn btn-sm btn-primary">Save</button>&nbsp;
+                      <button
+                        type="reset"
+                        className="btn btn-sm"
+                        onClick={() => this.setState({editBio: false})}
+                      >Cancel</button>
+                    </div>
+                  </div>
+                </div>
+              </form>}
               <ul className="border-gray-light border-top py-3 vcard-details">
                 <li className="vcard-detail pt-1 css-truncate css-truncate-target">
                   <svg className="octicon octicon-location" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true">
