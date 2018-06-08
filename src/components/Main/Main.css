@@ -276,3 +276,8 @@
     width: 100%;
   }
 }
+
+.contributions-setting .dropdown-menu {
+  left: -85px;
+  z-index: 80;
+}

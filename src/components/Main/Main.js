@@ -8,11 +8,11 @@ class Main extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {editBio: false};
+    this.state = {editBio: false, jumpToDropdown: false};
   }
 
   render() {
-    const {editBio} = this.state;
+    const {editBio, jumpToDropdown} = this.state;
 
     return (
       <div className="application-main ">
@@ -168,10 +168,22 @@ class Main extends Component {
 
                   <h2 className="f4 text-normal mb-2">
                     Contribution activity
-                    <span className="contributions-setting dropdown float-right">
-                      <button className="btn-link contributions-setting-link muted-link select-menu-button text-normal">
+                    <span className={`contributions-setting dropdown float-right ${jumpToDropdown ? "active" : ""}`}>
+                      <button
+                        className="btn-link contributions-setting-link muted-link select-menu-button text-normal"
+                        onClick={()=>{this.setState({jumpToDropdown: !jumpToDropdown})}}
+                      >
                         Jump to &shy;
                       </button>
+                      <span className="dropdown-menu-content">
+                        <span className="f5 dropdown-menu dropdown-menu-sw">
+                          {[
+                            "First pull request",
+                            "First issue",
+                            "First repository",
+                            "Joined GitHub"].map(name => <a key={name} className="dropdown-item">{name}</a>)}
+                        </span>
+                      </span>
                     </span>
                   </h2>
 
