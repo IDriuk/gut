@@ -238,7 +238,9 @@ class Main extends Component {
                               <div className="col-3 d-inline-block float-right">
                                 <div
                                   style={{width: "100%"}}
-                                  className="tooltipped tooltipped-n">
+                                  className="tooltipped tooltipped-n"
+                                  aria-label="100% of commits in June were made to IDriuk/gut "
+                                >
                                   <span
                                     style={{backgroundColor: "#196127"}}
                                     className="d-flex anim-grow-x progress-bar mt-1"></span>
