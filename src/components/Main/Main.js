@@ -8,11 +8,15 @@ class Main extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {editBio: false, jumpToDropdown: false};
+    this.state = {
+      editBio: false,
+      jumpToDropdown: false,
+      rollupOpen: true
+    };
   }
 
   render() {
-    const {editBio, jumpToDropdown} = this.state;
+    const {editBio, jumpToDropdown, rollupOpen} = this.state;
 
     return (
       <div className="application-main ">
@@ -196,7 +200,7 @@ class Main extends Component {
                         <h3 className="profile-timeline-month-heading bg-white d-inline-block h6 pr-2 py-1">
                           May <span className="text-gray"> 2018</span> &shy;
                         </h3>
-                        <div className="ml-3 open pl-4 position-relative profile-rollup-wrapper py-4">
+                        <div className={`ml-3 pl-4 position-relative profile-rollup-wrapper py-4 ${rollupOpen ? "open" : ""}`}>
                           <span className="discussion-item-icon">
                             <svg className="octicon octicon-repo-push" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true">
                               <path fillRule="evenodd" d="M4 3H3V2h1v1zM3 5h1V4H3v1zm4 0L4 9h2v7h2V9h2L7 5zm4-5H1C.45 0 0 .45 0 1v12c0 .55.45 1 1 1h4v-1H1v-2h4v-1H2V1h9.02L11 10H9v1h2v2H9v1h2c.55 0 1-.45 1-1V1c0-.55-.45-1-1-1z"></path>
@@ -207,9 +211,20 @@ class Main extends Component {
                               Created 36 commits in 1 repository
                             </span>
                             <span className="d-inline-block float-right">
-                              <span className="profile-rollup-toggle-closed float-right">
+                              <span
+                                className="profile-rollup-toggle-closed float-right"
+                                onClick={()=>this.setState({rollupOpen: !rollupOpen})}
+                              >
                                 <svg className="octicon octicon-fold" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true">
                                   <path fillRule="evenodd" d="M7 9l3 3H8v3H6v-3H4l3-3zm3-6H8V0H6v3H4l3 3 3-3zm4 2c0-.55-.45-1-1-1h-2.5l-1 1h3l-2 2h-7l-2-2h3l-1-1H1c-.55 0-1 .45-1 1l2.5 2.5L0 10c0 .55.45 1 1 1h2.5l1-1h-3l2-2h7l2 2h-3l1 1H13c.55 0 1-.45 1-1l-2.5-2.5L14 5z"></path>
+                                </svg>
+                              </span>
+                              <span
+                                className="profile-rollup-toggle-open float-right"
+                                onClick={()=>this.setState({rollupOpen: !rollupOpen})}
+                              >
+                                <svg className="octicon octicon-unfold" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true">
+                                  <path fillRule="evenodd" d="M11.5 7.5L14 10c0 .55-.45 1-1 1H9v-1h3.5l-2-2h-7l-2 2H5v1H1c-.55 0-1-.45-1-1l2.5-2.5L0 5c0-.55.45-1 1-1h4v1H1.5l2 2h7l2-2H9V4h4c.55 0 1 .45 1 1l-2.5 2.5zM6 6h2V3h2L7 0 4 3h2v3zm2 3H6v3H4l3 3 3-3H8V9z"></path>
                                 </svg>
                               </span>
                             </span>

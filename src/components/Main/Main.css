@@ -237,10 +237,21 @@
   border-radius: 50%;
 }
 
+.profile-rollup-toggle-closed {
+  display: none;
+}
+
 .profile-rollup-wrapper.open .profile-rollup-toggle-closed {
   display: block;
 }
 
+.profile-rollup-wrapper.open .profile-rollup-toggle-open {
+  display: none;
+}
+
+.profile-rollup-content {
+  display: none;
+}
 .profile-rollup-wrapper.open > .profile-rollup-content {
   display: block;
 }
