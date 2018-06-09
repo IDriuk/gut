@@ -1,8 +1,15 @@
 import React from 'react';
+import SvgTip from './SvgTip';
 
 export default () =>
 <div className="calendar-graph height-full">
-
+  <SvgTip
+    className="svg-tip svg-tip-one-line"
+    style={{top: 653, left: 545}}
+  >
+    <strong>7 contributions</strong> &nbsp;
+     on Aug 1, 2017
+  </SvgTip>
   <svg width="676" height="104" className="js-calendar-graph-svg">
     <g transform="translate(16, 20)">
         <g transform="translate(0, 0)">
