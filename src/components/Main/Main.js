@@ -23,7 +23,10 @@ class Main extends Component {
         <div>
           <div className="clearfix container-lg mt-4 px-3">
             <div className="h-card col-3 float-left pr-3">
-              <a className="u-photo d-block tooltipped tooltipped-s">
+              <a
+                className="u-photo d-block tooltipped tooltipped-s"
+                aria-label="Change your avatar"
+              >
                 <img
                   className="avatar width-full rounded-2"
                   src="https://avatars1.githubusercontent.com/u/8888039?s=460&v=4"

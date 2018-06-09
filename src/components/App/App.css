@@ -630,14 +630,31 @@
   border-top-color: #1b1f23;
 }
 
+.tooltipped-s::before{
+  top: auto;
+  right: 50%;
+  bottom: -7px;
+  margin-right: -6px;
+  border-bottom-color: #1b1f23;
+}
+
 .tooltipped-n::after {
   right: 50%;
   bottom: 100%;
   margin-bottom: 6px;
 }
 
+.tooltipped-s::after,
 .tooltipped-n::after {
   transform: translateX(50%);
+}
+
+.tooltipped-s::after,
+.tooltipped-se::after,
+.tooltipped-sw::after {
+  top: 100%;
+  right: 50%;
+  margin-top: 6px;
 }
 
 .tooltipped:hover::before,
