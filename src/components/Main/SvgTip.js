@@ -11,6 +11,7 @@ class SvgTip extends Component {
     this.el.className = this.props.className;
     this.el.style.top = `${this.props.style.top}px` ;
     this.el.style.left = `${this.props.style.left}px`;
+    this.el.onmouseover = this.props.hide;
   }
 
   componentDidMount() {
