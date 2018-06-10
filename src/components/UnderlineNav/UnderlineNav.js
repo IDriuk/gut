@@ -9,7 +9,7 @@ class UnderlineNav extends Component {
       <Fragment>
         <div
           className="UnderlineNav user-profile-nav top-0 is-placeholder"
-          style={visibility: "hidden", display: "none", height: 55}
+          style={{visibility: "hidden", display: "none", height: 55}}
         ></div>
         <div className="UnderlineNav user-profile-nav top-0">
           <nav className="UnderlineNav-body">
