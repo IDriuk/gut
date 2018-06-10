@@ -4,14 +4,49 @@ import './UnderlineNav.css';
 // skey: sticky, sticky-js, jQuery Sticky Kit
 
 class UnderlineNav extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = { sticky: false, offsetLeft: 0 };
+
+    this.handleScroll = this.handleScroll.bind(this);
+  }
+
+  componentDidMount() {
+    window.addEventListener('scroll', this.handleScroll);
+    this.setState({ offsetLeft: this.nav.offsetLeft})
+  }
+
+  // skey: offset window
+  handleScroll() {
+    if (window.pageYOffset > 80) {
+      this.setState({ sticky: true });
+    } else {
+      this.setState({ sticky: false });
+    }
+  }
+
   render() {
+    const { sticky, offsetLeft } = this.state;
+    const displayPlaceholder = sticky ? "block" : "none";
+    const navStyle = !sticky ? { position: "static" }
+                             : { position: "fixed",
+                                 top: 0,
+                                 left: offsetLeft,
+                                 width: 727,
+                                 marginTop: 0
+                               }
     return (
       <Fragment>
         <div
           className="UnderlineNav user-profile-nav top-0 is-placeholder"
-          style={{visibility: "hidden", display: "none", height: 55}}
+          style={{visibility: "hidden", display: displayPlaceholder, height: 55}}
         ></div>
-        <div className="UnderlineNav user-profile-nav top-0">
+        <div
+          className={`UnderlineNav user-profile-nav top-0 ${sticky ? "is-stuck" : "" }`}
+          style={navStyle}
+          ref={(node) => {this.nav = node}}
+        >
           <nav className="UnderlineNav-body">
             {
               [
