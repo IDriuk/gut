@@ -63,6 +63,14 @@
   display: flex !important;
 }
 
+.d-table {
+  display: table !important;
+}
+
+.d-table-cell {
+  display: table-cell !important;
+}
+
 .d-none {
   display: none !important;
 }
@@ -105,6 +113,10 @@
 
 .v-align-middle {
   vertical-align: middle !important;
+}
+
+.lh-condensed-ultra {
+  line-height: 1 !important;
 }
 
 .text-center {

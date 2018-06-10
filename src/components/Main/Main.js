@@ -13,16 +13,49 @@ class Main extends Component {
       jumpToDropdown: false,
       rollupOpen: true
     };
+
+    this.handleScroll = this.handleScroll.bind(this);
+  }
+
+  componentDidMount() {
+    window.addEventListener('scroll', this.handleScroll);
+  }
+
+  handleScroll() {
+    if (window.pageYOffset > 305) {
+      this.setState({ stickyAvatar: true });
+    } else {
+      this.setState({ stickyAvatar: false });
+    }
   }
 
   render() {
-    const {editBio, jumpToDropdown, rollupOpen} = this.state;
+    const {editBio, jumpToDropdown, rollupOpen, stickyAvatar} = this.state;
 
     return (
       <div className="application-main ">
         <div>
           <div className="clearfix container-lg mt-4 px-3">
             <div className="h-card col-3 float-left pr-3">
+
+              <div className={`user-profile-sticky-bar js-user-profile-sticky-bar ${stickyAvatar ? "is-stuck" : ""}`}>
+                {/* skey: display table, table-cell */}
+                <div className="user-profile-mini-vcard d-table">
+                  <span className="user-profile-mini-avatar d-table-cell v-align-middle lh-condensed-ultra pr-2">
+                    <img
+                      className="rounded-1"
+                      src="https://avatars3.githubusercontent.com/u/8888039?s=64&v=4"
+                      alt="@IDriuk"
+                      width={32}
+                      height={32}
+                    />
+                  </span>
+                  <span className="d-table-cell v-align-middle lh-condensed js-user-profile-following-mini-toggle">
+                    <strong>IDriuk</strong>
+                  </span>
+                </div>
+              </div>
+
               <a
                 className="u-photo d-block tooltipped tooltipped-s"
                 aria-label="Change your avatar"

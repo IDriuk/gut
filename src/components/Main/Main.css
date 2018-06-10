@@ -287,3 +287,51 @@
   left: -85px;
   z-index: 80;
 }
+
+.user-profile-sticky-bar {
+  position: fixed;
+  top: 0;
+  z-index: 90;
+  width: 233px;
+  word-break: break-all;
+  pointer-events: none;
+  opacity: 0;
+  transition: 0.2s;
+}
+
+.user-profile-sticky-bar.is-stuck {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.user-profile-mini-vcard {
+  position: relative;
+  top: 1px;
+  z-index: 110;
+  height: 54px;
+}
+
+.user-profile-mini-avatar {
+  width: 32px;
+}
+
+.user-profile-sticky-bar::after {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 100;
+  display: none;
+  height: 54px;
+  content: "";
+  background-color: #fff;
+  border-bottom: solid 1px #d1d5da;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.075);
+  opacity: 0;
+  transition: 0.2s;
+}
+
+.user-profile-sticky-bar.is-stuck::after {
+  display: block;
+  opacity: 1;
+}
