@@ -125,6 +125,18 @@ class Main extends Component {
                     </details>
                     <h2 className="f4 mb-2 text-normal">Pinned repositories</h2>
                     <form>
+{/*
+trick: javascript watch style change
+var observer = new MutationObserver(function(mutations) {
+    mutations.forEach(function(mutationRecord) {
+        console.log($el.attributes.style);
+    });
+});
+
+observer.observe($0, { attributes : true, attributeFilter : ['style'] });
+
+skey: drag, sortable.js, https://github.com/RubaXa/Sortable/blob/master/Sortable.js 
+*/}
                       <ol className="mb-4 pinned-repos-list">
                         {[
                           {name: "gut", desc: "reverse engineering of github frontend", language: "JavaScript"},
