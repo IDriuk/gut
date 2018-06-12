@@ -36,5 +36,21 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+
+    <!-- investigate sortable -->
+    <script src="%PUBLIC_URL%/Sortable.js" ></script>
+
+    <ul id="items">
+    	<li>item 1</li>
+    	<li>item 2</li>
+    	<li>item 3</li>
+    </ul>
+    
+    <script>
+      var el = document.getElementById('items');
+      var sortable = Sortable.create(el);
+    </script>
+    <!-- end investigate sortable -->
+
   </body>
 </html>
