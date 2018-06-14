@@ -42,3 +42,15 @@
 .pinned-repo-item .pinned-repository-handle:hover {
   cursor: grab;
 }
+
+.pinned-repo-item.is-dragging{
+  cursor: grabbing;
+}
+
+.pinned-repo-item.is-dragging {
+  background-color: #f1f8ff;
+}
+
+.pinned-repo-item.sortable-ghost {
+  background-color: #f1f8ff;
+}
