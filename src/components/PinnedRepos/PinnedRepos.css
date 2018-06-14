@@ -53,4 +53,5 @@
 
 .pinned-repo-item.sortable-ghost {
   background-color: #f1f8ff;
+  opacity: 0;
 }

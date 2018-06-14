@@ -4,11 +4,15 @@ import './PinnedRepos.css';
 import Sortable from './Sortable';
 
 class PinnedRepos extends Component {
-  render() {
+  componentDidMount() {
+    const list = document.getElementById("list");
+    Sortable.create(list);
+  }
 
+  render() {
     return (
       <form>
-        <ol className="mb-4 pinned-repos-list">
+        <ol id="list" className="mb-4 pinned-repos-list">
           {[
             {name: "gut", desc: "reverse engineering of github frontend", language: "JavaScript"},
             {name: "m_gut", desc: "reverse engineering mobile version of github frontend", language: "JavaScript"},
