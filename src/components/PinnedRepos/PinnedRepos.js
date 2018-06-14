@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
 import './PinnedRepos.css';
 
+import Sortable from './Sortable';
+
 class PinnedRepos extends Component {
   render() {
+
     return (
       <form>
         <ol className="mb-4 pinned-repos-list">

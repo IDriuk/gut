@@ -1,3 +1,7 @@
+/* eslint-disable */
+
+// trick: disable eslint for file (place /* eslint-disable */ in the top)
+
 /**!
  * Sortable
  * @author	RubaXa   <trash@rubaxa.org>
@@ -7,10 +11,7 @@
 (function sortableModule(factory) {
 	"use strict";
 
-	if (typeof define === "function" && define.amd) {
-		define(factory);
-	}
-	else if (typeof module != "undefined" && typeof module.exports != "undefined") {
+	if (typeof module != "undefined" && typeof module.exports != "undefined") {
 		module.exports = factory();
 	}
 	else {
