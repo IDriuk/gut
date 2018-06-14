@@ -5,8 +5,10 @@ import Sortable from './Sortable';
 
 class PinnedRepos extends Component {
   componentDidMount() {
-    const list = document.getElementById("list");
-    Sortable.create(list);
+    if (process.env.NODE_ENV !== "test") {
+      const list = document.getElementById("list");
+      Sortable.create(list);
+    }
   }
 
   render() {
