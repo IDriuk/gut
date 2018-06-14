@@ -5,9 +5,14 @@ import Sortable from './Sortable';
 
 class PinnedRepos extends Component {
   componentDidMount() {
+    /* trick: environment */
     if (process.env.NODE_ENV !== "test") {
       const list = document.getElementById("list");
-      Sortable.create(list);
+      Sortable.create(list, {
+        handle: ".pinned-repository-handle",
+        chosenClass: "is-dragging",
+        animation: 150
+      });
     }
   }
 
