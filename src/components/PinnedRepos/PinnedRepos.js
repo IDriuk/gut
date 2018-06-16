@@ -8,6 +8,7 @@ class PinnedRepos extends Component {
     /* trick: environment */
     if (process.env.NODE_ENV !== "test") {
       const list = document.getElementById("list");
+      
       Sortable.create(list, {
         handle: ".pinned-repository-handle",
         chosenClass: "is-dragging",
