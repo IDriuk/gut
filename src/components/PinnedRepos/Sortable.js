@@ -2,6 +2,19 @@
 
 // trick: disable eslint for file (place /* eslint-disable */ in the top)
 
+// trick: simulate mousedown event on handler
+// var mouseDown = new MouseEvent('mousedown', {
+//     'view': window,
+//     'bubbles': true,
+//     'cancelable': true
+//   });
+//
+// var handler = document.querySelector("#list > li:nth-child(1) > div > span > span");
+//
+// handler.dispatchEvent(mouseDown);
+// mouseup
+
+
 (function sortableModule(factory) {
 	module.exports = factory();
 })(function sortableFactory() {
