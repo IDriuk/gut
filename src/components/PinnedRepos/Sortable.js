@@ -14,6 +14,9 @@
 // handler.dispatchEvent(mouseDown);
 // mouseup
 
+// skey: scripting-sortable, Simulate Drag and Drop with JavaScript
+// https://raw.githubusercontent.com/kemokid/scripting-sortable/master/script_sortable_dnd_more_general.js
+
 
 (function sortableModule(factory) {
 	module.exports = factory();
@@ -88,8 +91,7 @@
 			handle: null,
 			draggable: /[uo]l/i.test(el.nodeName) ? 'li' : '>*',
 			ghostClass: 'sortable-ghost',
-			chosenClass: 'sortable-chosen',
-			dragClass: 'sortable-drag',
+			chosenClass: 'is-dragging',
 			ignore: 'a, img',
 			animation: 0,
 			setData: function (dataTransfer, dragEl) {
@@ -99,11 +101,6 @@
 			dragoverBubble: false,
 			dataIdAttr: 'data-id',
 			delay: 0,
-			forceFallback: false,
-			fallbackClass: 'sortable-fallback',
-			fallbackOnBody: false,
-			fallbackTolerance: 0,
-			fallbackOffset: {x: 0, y: 0},
 			supportPointer: Sortable.supportPointer !== false
 		};
 
@@ -156,11 +153,6 @@
 				return; // only left button or enabled
 			}
 
-			// cancel dnd if original target is content editable
-			if (originalTarget.isContentEditable) {
-				return;
-			}
-
 			target = _closest(target, options.draggable, el);
 
 			if (!target) {
@@ -201,13 +193,9 @@
 
 				this._lastX = (touch || evt).clientX;
 				this._lastY = (touch || evt).clientY;
-
 				dragEl.style['will-change'] = 'all';
 
 				dragStartFn = function () {
-					// Delayed drag has been triggered
-					// we can re-enable the events: touchmove/mousemove
-					_this._disableDelayedDrag();
 
 					// Make the element draggable
 					dragEl.draggable = _this.nativeDraggable;
@@ -231,21 +219,12 @@
 			}
 		},
 
-		_disableDelayedDrag: function () {
-			var ownerDocument = this.el.ownerDocument;
-
-			_off(ownerDocument, 'mouseup', this._disableDelayedDrag);
-			_off(ownerDocument, 'mousemove', this._disableDelayedDrag);
-			_off(ownerDocument, 'pointermove', this._disableDelayedDrag);
-		},
-
 		_dragStarted: function () {
 			if (rootEl && dragEl) {
 				var options = this.options;
 
 				// Apply effect
 				_toggleClass(dragEl, options.ghostClass, true);
-				_toggleClass(dragEl, options.dragClass, false);
 
 				Sortable.active = this;
 
@@ -256,45 +235,12 @@
 			}
 		},
 
-		_appendGhost: function () {
-			if (!ghostEl) {
-				var rect = dragEl.getBoundingClientRect(),
-					css = _css(dragEl),
-					options = this.options,
-					ghostRect;
-
-				ghostEl = dragEl.cloneNode(true);
-
-				_toggleClass(ghostEl, options.ghostClass, false);
-				_toggleClass(ghostEl, options.fallbackClass, true);
-				_toggleClass(ghostEl, options.dragClass, true);
-
-				_css(ghostEl, 'top', rect.top - parseInt(css.marginTop, 10));
-				_css(ghostEl, 'left', rect.left - parseInt(css.marginLeft, 10));
-				_css(ghostEl, 'width', rect.width);
-				_css(ghostEl, 'height', rect.height);
-				_css(ghostEl, 'opacity', '0.8');
-				_css(ghostEl, 'position', 'fixed');
-				_css(ghostEl, 'zIndex', '100000');
-				_css(ghostEl, 'pointerEvents', 'none');
-
-				options.fallbackOnBody && document.body.appendChild(ghostEl) || rootEl.appendChild(ghostEl);
-
-				// Fixing dimensions.
-				ghostRect = ghostEl.getBoundingClientRect();
-				_css(ghostEl, 'width', rect.width * 2 - ghostRect.width);
-				_css(ghostEl, 'height', rect.height * 2 - ghostRect.height);
-			}
-		},
-
 		_onDragStart: function (/**Event*/evt, /**boolean*/useFallback) {
 			var _this = this;
 			var dataTransfer = evt.dataTransfer;
 			var options = _this.options;
 
 			_this._offUpEvents();
-
-			_toggleClass(dragEl, options.dragClass, true);
 
 			if (dataTransfer) {
 				dataTransfer.effectAllowed = 'move';
@@ -346,7 +292,6 @@
 
 				target = _closest(evt.target, options.draggable, el);
 				dragRect = dragEl.getBoundingClientRect();
-
 				if (putSortable !== this) {
 					putSortable = this;
 					isMovingBetweenSortable = true;
@@ -375,7 +320,6 @@
 							el.appendChild(dragEl);
 							parentEl = el; // actualization
 						}
-
 						this._animate(dragRect, dragEl);
 						target && this._animate(targetRect, target);
 					}
@@ -446,6 +390,7 @@
 		},
 
 		_animate: function (prevRect, target) {
+
 			var ms = this.options.animation;
 
 			if (ms) {
@@ -515,6 +460,7 @@
 
 				if (rootEl === parentEl || Sortable.active.lastPullMode !== 'clone') {
 					// Remove clone
+
 					cloneEl && cloneEl.parentNode && cloneEl.parentNode.removeChild(cloneEl);
 				}
 
@@ -691,6 +637,7 @@
 
 
 	function _cloneHide(sortable, state) {
+
 		if (sortable.lastPullMode !== 'clone') {
 			state = true;
 		}
