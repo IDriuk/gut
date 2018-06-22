@@ -2,8 +2,12 @@ import React, { Component } from 'react';
 import SvgTip from './SvgTip';
 
 // trick: getBoundingClientRect
+<<<<<<< HEAD
 // skey: left, pageXOffset, offsetWidth, offset, width, height, top, bottom, right, offsetTop, scrollBy, scroll, event.clientX, screenX, offsetX (for playing with position coordinates)
 // trick: move to click position https://learn.javascript.ru/task/move-ball-field
+=======
+// skey: left, pageXOffset, offsetWidth, offset, width, height, top, bottom, right, offsetTop, scrollBy, scroll(for playing with position coordinates)
+>>>>>>> 961c087f3269a4381b4423e4ab439404f1e92077
 
 class CalendarGraph extends Component {
   constructor(props) {
