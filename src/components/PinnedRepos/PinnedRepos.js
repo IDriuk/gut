@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import './PinnedRepos.css';
 
-import Sortable from './Sortable';
+import Sortable from '../../libs/Sortable';
 
 class PinnedRepos extends Component {
   componentDidMount() {
     /* trick: environment */
     if (process.env.NODE_ENV !== "test") {
       const list = document.getElementById("list");
-      
+
       Sortable.create(list, {
         handle: ".pinned-repository-handle",
         chosenClass: "is-dragging",
