@@ -3,7 +3,7 @@ import './Main.css';
 
 import UnderlineNav from '../UnderlineNav/UnderlineNav';
 import PinnedRepos from '../PinnedRepos/PinnedRepos';
-import CalendarGraph from './CalendarGraph';
+import CalendarGraph from '../CalendarGraph/CalendarGraph';
 
 class Main extends Component {
   constructor(props) {
