@@ -5,8 +5,11 @@ import Sortable from '../../libs/Sortable';
 
 class PinnedRepos extends Component {
   componentDidMount() {
+
     /* trick: environment */
     if (process.env.NODE_ENV !== "test") {
+      this.props.fetchPinnedRepos();
+      
       const list = document.getElementById("list");
 
       Sortable.create(list, {
@@ -18,17 +21,12 @@ class PinnedRepos extends Component {
   }
 
   render() {
+    const { pinnedRepos } = this.props;
+
     return (
       <form>
         <ol id="list" className="mb-4 pinned-repos-list">
-          {[
-            {name: "gut", desc: "reverse engineering of github frontend", language: "JavaScript"},
-            {name: "m_gut", desc: "reverse engineering mobile version of github frontend", language: "JavaScript"},
-            {name: "avato", desc: "Avito with React.js", language: "JavaScript"},
-            {name: "m_avato", desc: "Frontend of mobile avito with React.js", language: "JavaScript"},
-            {name: "yalp", desc: "Yelp frontend with React.js", language: "JavaScript"},
-            {name: "m_yalp", desc: "Frontend of mobile yelp with React.js", language: "JavaScript"},
-          ].map(({name, desc, language}, index) =>
+          {pinnedRepos.map(({name, desc, language, langColor}, index) =>
           <li key={index} className="border border-gray-dark mb-3 p-3 pinned-repo-item public reorderable rounded-1 sortable-button-item source">
             <div className="pinned-repo-item-content">
               <span className="d-block position-relative">
@@ -45,7 +43,7 @@ class PinnedRepos extends Component {
               <p className="mb-0 f6 text-gray">
                 <span
                   className="repo-language-color pinned-repo-meta"
-                  style={{backgroundColor: "#f1e05a"}}
+                  style={{backgroundColor: langColor}}
                 ></span>
                 &nbsp;
                 {language}
