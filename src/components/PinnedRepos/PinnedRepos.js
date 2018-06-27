@@ -27,33 +27,39 @@ class PinnedRepos extends Component {
     const { pinnedRepos } = this.props;
 
     return (
-      <form>
-        <ol id="list" className="mb-4 pinned-repos-list">
-          {pinnedRepos.map(({name, desc, language, langColor}, index) =>
-          <li key={index} className="border border-gray-dark mb-3 p-3 pinned-repo-item public reorderable rounded-1 sortable-button-item source">
-            <div className="pinned-repo-item-content">
-              <span className="d-block position-relative">
-                <span className="float-left pinned-repository-handle pr-2">
-                  <Grabber />
+      <div>
+        <details className="details-reset">
+          <summary className="btn-link muted-link float-right mt-1 pinned-repos-setting-link">Customize your pinned repositories</summary>
+        </details>
+        <h2 className="f4 mb-2 text-normal">Pinned repositories</h2>
+        <form>
+          <ol id="list" className="mb-4 pinned-repos-list">
+            {pinnedRepos.map(({name, desc, language, langColor}, index) =>
+            <li key={index} className="border border-gray-dark mb-3 p-3 pinned-repo-item public reorderable rounded-1 sortable-button-item source">
+              <div className="pinned-repo-item-content">
+                <span className="d-block position-relative">
+                  <span className="float-left pinned-repository-handle pr-2">
+                    <Grabber />
+                  </span>
+                  <a className="text-bold">
+                    <span className="repo">{name}</span>
+                  </a>
                 </span>
-                <a className="text-bold">
-                  <span className="repo">{name}</span>
-                </a>
-              </span>
-              <p className="pinned-repo-desc text-gray text-small d-block mt-2 mb-3">{desc}</p>
-              <p className="mb-0 f6 text-gray">
-                <span
-                  className="repo-language-color pinned-repo-meta"
-                  style={{backgroundColor: langColor}}
-                ></span>
-                &nbsp;
-                {language}
-              </p>
-            </div>
-          </li>
-          )}
-        </ol>
-      </form>
+                <p className="pinned-repo-desc text-gray text-small d-block mt-2 mb-3">{desc}</p>
+                <p className="mb-0 f6 text-gray">
+                  <span
+                    className="repo-language-color pinned-repo-meta"
+                    style={{backgroundColor: langColor}}
+                  ></span>
+                  &nbsp;
+                  {language}
+                </p>
+              </div>
+            </li>
+            )}
+          </ol>
+        </form>
+      </div>
     );
   }
 }
