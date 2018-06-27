@@ -5,6 +5,7 @@ import UserProfile from '../UserProfile/UserProfile';
 import UnderlineNav from '../../containers/UnderlineNavContainer';
 import PinnedRepos from '../../containers/PinnedReposContainer';
 import CalendarGraph from '../CalendarGraph/CalendarGraph';
+import YearsMenu from '../YearsMenu/YearsMenu';
 
 import Push from '../../assets/icons/Push';
 import Fold from '../../assets/icons/Fold';
@@ -78,15 +79,7 @@ class Main extends Component {
 
                   </div>
 
-                  <div className="col-2 float-right pl-5">
-                    <ul className="filter-list small">
-                      {[8, 7, 6, 5, 4].map(i =>
-                        <li key={i} >
-                          <a className={`filter-item mb-2 px-3 py-2 ${i===8 ? "selected" : ""}`}>201{i}</a>
-                        </li>
-                      )}
-                    </ul>
-                  </div>
+                  <YearsMenu />
 
                   <h2 className="f4 text-normal mb-2">
                     Contribution activity
