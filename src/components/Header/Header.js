@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import './Header.css';
 
 import searchShortcutHint from '../../assets/images/search-shortcut-hint.svg';
@@ -16,7 +17,12 @@ class Header extends Component {
     this.state = {searchActive: false, focusSuggestion: false};
   }
 
+  componentDidMount() {
+    this.props.fetchSuggestions();
+  }
+
   render() {
+    const { suggestions } = this.props;
     const { searchActive, focusSuggestion } = this.state;
 
     return (
@@ -48,11 +54,7 @@ class Header extends Component {
                       ></img>
                       <div className={`Box jump-to-suggestions overflow-hidden position-absolute ${searchActive ? "" : "d-none"}`}>
                         <ul className="jump-to-suggestions-results-container">
-                          {["IDriuk/gut",
-                            "primer/primer",
-                            "IDriuk/cloud",
-                            "IDriuk/m_gut",
-                            "IDriuk/yalp"].map(name =>
+                          {suggestions.map(name =>
                           <li
                             key={name}
                             className={`d-flex f5 flex-items-center flex-justify-start navigation-item p-0 ${focusSuggestion === name ? "navigation-focus" : ""}`}
@@ -164,5 +166,9 @@ class Header extends Component {
     );
   }
 }
+
+Header.propTypes = {
+  suggestions: PropTypes.array.isRequired
+};
 
 export default Header;

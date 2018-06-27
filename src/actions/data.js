@@ -14,3 +14,11 @@ export const navCategoriesCounts = [
   ["Followers", 7],
   ["Following", 2]
 ];
+
+export const suggestions = [
+  "IDriuk/gut",
+  "primer/primer",
+  "IDriuk/cloud",
+  "IDriuk/m_gut",
+  "IDriuk/yalp"
+];
