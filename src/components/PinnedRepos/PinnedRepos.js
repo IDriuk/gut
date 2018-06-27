@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import './PinnedRepos.css';
 
 import Sortable from '../../libs/Sortable';
@@ -9,7 +10,7 @@ class PinnedRepos extends Component {
     /* trick: environment */
     if (process.env.NODE_ENV !== "test") {
       this.props.fetchPinnedRepos();
-      
+
       const list = document.getElementById("list");
 
       Sortable.create(list, {
@@ -56,6 +57,10 @@ class PinnedRepos extends Component {
     );
   }
 }
+
+PinnedRepos.propTypes = {
+  pinnedRepos: PropTypes.array.isRequired
+};
 
 export default PinnedRepos;
 

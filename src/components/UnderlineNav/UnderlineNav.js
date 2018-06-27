@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react';
+import PropTypes from 'prop-types';
 import './UnderlineNav.css';
 
 // skey: sticky, sticky-js, jQuery Sticky Kit
@@ -71,5 +72,9 @@ class UnderlineNav extends Component {
     );
   }
 }
+
+UnderlineNav.propTypes = {
+  navCategoriesCounts: PropTypes.array.isRequired
+};
 
 export default UnderlineNav;
