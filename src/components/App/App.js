@@ -9,12 +9,13 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="position-relative">
-          <Header />
-        </div>
+
+        <Header />
 
         <Main />
+        
         <Footer />
+
       </div>
     );
   }
