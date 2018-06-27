@@ -8,6 +8,11 @@ import CalendarGraph from '../CalendarGraph/CalendarGraph';
 import avatar3 from '../../assets/images/avatar3.jpg';
 import avatar1 from '../../assets/images/avatar1.jpg';
 
+import Location from '../../assets/icons/Location';
+import Push from '../../assets/icons/Push';
+import Fold from '../../assets/icons/Fold';
+import Unfold from '../../assets/icons/Unfold';
+
 class Main extends Component {
   constructor(props) {
     super(props);
@@ -109,9 +114,7 @@ class Main extends Component {
               </form>}
               <ul className="border-gray-light border-top py-3 vcard-details">
                 <li className="vcard-detail pt-1 css-truncate css-truncate-target">
-                  <svg className="octicon octicon-location" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true">
-                    <path fillRule="evenodd" d="M6 0C2.69 0 0 2.5 0 5.5 0 10.02 6 16 6 16s6-5.98 6-10.5C12 2.5 9.31 0 6 0zm0 14.55C4.14 12.52 1 8.44 1 5.5 1 3.02 3.25 1 6 1c1.34 0 2.61.48 3.56 1.36.92.86 1.44 1.97 1.44 3.14 0 2.94-3.14 7.02-5 9.05zM8 5.5c0 1.11-.89 2-2 2-1.11 0-2-.89-2-2 0-1.11.89-2 2-2 1.11 0 2 .89 2 2z"></path>
-                  </svg>
+                  <Location />
                   <span>Poltava, Ukraine</span>
                 </li>
               </ul>
@@ -207,9 +210,7 @@ class Main extends Component {
                         </h3>
                         <div className={`ml-3 pl-4 position-relative profile-rollup-wrapper py-4 ${rollupOpen ? "open" : ""}`}>
                           <span className="discussion-item-icon">
-                            <svg className="octicon octicon-repo-push" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true">
-                              <path fillRule="evenodd" d="M4 3H3V2h1v1zM3 5h1V4H3v1zm4 0L4 9h2v7h2V9h2L7 5zm4-5H1C.45 0 0 .45 0 1v12c0 .55.45 1 1 1h4v-1H1v-2h4v-1H2V1h9.02L11 10H9v1h2v2H9v1h2c.55 0 1-.45 1-1V1c0-.55-.45-1-1-1z"></path>
-                            </svg>
+                            <Push />
                           </span>
                           <button className="btn-link f4 lh-condensed muted-link no-underline width-full">
                             <span className="float-left">
@@ -220,17 +221,13 @@ class Main extends Component {
                                 className="profile-rollup-toggle-closed float-right"
                                 onClick={()=>this.setState({rollupOpen: !rollupOpen})}
                               >
-                                <svg className="octicon octicon-fold" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true">
-                                  <path fillRule="evenodd" d="M7 9l3 3H8v3H6v-3H4l3-3zm3-6H8V0H6v3H4l3 3 3-3zm4 2c0-.55-.45-1-1-1h-2.5l-1 1h3l-2 2h-7l-2-2h3l-1-1H1c-.55 0-1 .45-1 1l2.5 2.5L0 10c0 .55.45 1 1 1h2.5l1-1h-3l2-2h7l2 2h-3l1 1H13c.55 0 1-.45 1-1l-2.5-2.5L14 5z"></path>
-                                </svg>
+                                <Fold />
                               </span>
                               <span
                                 className="profile-rollup-toggle-open float-right"
                                 onClick={()=>this.setState({rollupOpen: !rollupOpen})}
                               >
-                                <svg className="octicon octicon-unfold" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true">
-                                  <path fillRule="evenodd" d="M11.5 7.5L14 10c0 .55-.45 1-1 1H9v-1h3.5l-2-2h-7l-2 2H5v1H1c-.55 0-1-.45-1-1l2.5-2.5L0 5c0-.55.45-1 1-1h4v1H1.5l2 2h7l2-2H9V4h4c.55 0 1 .45 1 1l-2.5 2.5zM6 6h2V3h2L7 0 4 3h2v3zm2 3H6v3H4l3 3 3-3H8V9z"></path>
-                                </svg>
+                                <Unfold />
                               </span>
                             </span>
                           </button>
