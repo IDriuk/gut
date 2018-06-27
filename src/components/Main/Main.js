@@ -5,6 +5,9 @@ import UnderlineNav from '../../containers/UnderlineNavContainer';
 import PinnedRepos from '../../containers/PinnedReposContainer';
 import CalendarGraph from '../CalendarGraph/CalendarGraph';
 
+import avatar3 from '../../assets/images/avatar3.jpg';
+import avatar1 from '../../assets/images/avatar1.jpg';
+
 class Main extends Component {
   constructor(props) {
     super(props);
@@ -45,7 +48,7 @@ class Main extends Component {
                   <span className="user-profile-mini-avatar d-table-cell v-align-middle lh-condensed-ultra pr-2">
                     <img
                       className="rounded-1"
-                      src="https://avatars3.githubusercontent.com/u/8888039?s=64&v=4"
+                      src={avatar3}
                       alt="@IDriuk"
                       width={32}
                       height={32}
@@ -63,7 +66,7 @@ class Main extends Component {
               >
                 <img
                   className="avatar width-full rounded-2"
-                  src="https://avatars1.githubusercontent.com/u/8888039?s=460&v=4"
+                  src={avatar1}
                   width={230}
                   height={230}
                   alt=""

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import './Header.css';
 
 import searchShortcutHint from '../../assets/images/search-shortcut-hint.svg';
-import avatar from '../../assets/images/avatar.jpg';
+import avatar2 from '../../assets/images/avatar2.jpg';
 
 import MarkGithub from '../../assets/icons/MarkGithub';
 import Bell from '../../assets/icons/Bell';
@@ -123,7 +123,7 @@ class Header extends Component {
                         className="avatar float-left mr-1"
                         height={20}
                         width={20}
-                        src={avatar}
+                        src={avatar2}
                         alt="@IDriuk"
                       />
                       <span className="dropdown-caret"></span>
