@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import './PinnedRepos.css';
 
+import Grabber from '../../assets/icons/Grabber';
+
 import Sortable from '../../libs/Sortable';
 
 class PinnedRepos extends Component {
@@ -32,9 +34,7 @@ class PinnedRepos extends Component {
             <div className="pinned-repo-item-content">
               <span className="d-block position-relative">
                 <span className="float-left pinned-repository-handle pr-2">
-                  <svg className="octicon octicon-grabber" viewBox="0 0 8 16" version="1.1" width="8" height="16" aria-hidden="true">
-                    <path fillRule="evenodd" d="M8 4v1H0V4h8zM0 8h8V7H0v1zm0 3h8v-1H0v1z"></path>
-                  </svg>
+                  <Grabber />
                 </span>
                 <a className="text-bold">
                   <span className="repo">{name}</span>
