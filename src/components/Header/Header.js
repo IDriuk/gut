@@ -2,6 +2,12 @@ import React, { Component } from 'react';
 import './Header.css';
 
 import searchShortcutHint from '../../assets/images/search-shortcut-hint.svg';
+import avatar from '../../assets/images/avatar.jpg';
+
+import MarkGithub from '../../assets/icons/MarkGithub';
+import Bell from '../../assets/icons/Bell';
+import Repo from '../../assets/icons/Repo';
+import Plus from '../../assets/icons/Plus';
 
 class Header extends Component {
   constructor(props) {
@@ -19,9 +25,7 @@ class Header extends Component {
           <div className="d-flex flex-justify-between ">
             <div>
               <a className="header-logo-invertocat">
-                <svg height="32" className="octicon octicon-mark-github" viewBox="0 0 16 16" version="1.1" width="32" aria-hidden="true">
-                  <path fillRule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path>
-                </svg>
+                <MarkGithub />
               </a>
             </div>
           </div>
@@ -56,9 +60,7 @@ class Header extends Component {
                           >
                             <a className="d-flex flex-auto flex-items-center jump-to-suggestions-path no-underline p-2">
                               <div className="jump-to-octicon mr-2 text-center">
-                                <svg height="16" width="16" className="octicon octicon-repo flex-shrink-0 js-jump-to-repo-octicon-template" title="Repository" viewBox="0 0 12 16" version="1.1" aria-hidden="true">
-                                  <path fillRule="evenodd" d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z"></path>
-                                </svg>
+                                <Repo />
                               </div>
                               <div className="css-truncate css-truncate-target flex-auto jump-to-suggestion-name no-wrap overflow-hidden">{name}</div>
                               <div className="border rounded-1 flex-shrink-0 bg-gray px-1 text-gray-light ml-1 f6 d-on-nav-focus js-jump-to-badge-jump">
@@ -93,9 +95,7 @@ class Header extends Component {
                 <li className="dropdown">
                   <span className="d-inline-block  px-2">
                     <a className="notification-indicator tooltipped">
-                      <svg className="octicon octicon-bell" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true">
-                        <path fillRule="evenodd" d="M14 12v1H0v-1l.73-.58c.77-.77.81-2.55 1.19-4.42C2.69 3.23 6 2 6 2c0-.55.45-1 1-1s1 .45 1 1c0 0 3.39 1.23 4.16 5 .38 1.88.42 3.66 1.19 4.42l.66.58H14zm-7 4c1.11 0 2-.89 2-2H5c0 1.11.89 2 2 2z"></path>
-                      </svg>
+                      <Bell />
                     </a>
                   </span>
                 </li>
@@ -103,9 +103,7 @@ class Header extends Component {
                   {/* trick: details on click automatically add open atribut */}
                   <details className="details-expanded d-flex details-reset dropdown-details flex-items-center px-2">
                     <summary className="HeaderNavlink">
-                      <svg className="octicon octicon-plus float-left mr-1 mt-1" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true">
-                        <path fillRule="evenodd" d="M12 9H7v5H5V9H0V7h5V2h2v5h5z"></path>
-                      </svg>
+                      <Plus />
                       <span className="dropdown-caret mt-1"></span>
                     </summary>
                     <ul className="dropdown-menu dropdown-menu-sw">
@@ -123,7 +121,7 @@ class Header extends Component {
                         className="avatar float-left mr-1"
                         height={20}
                         width={20}
-                        src="https://avatars0.githubusercontent.com/u/8888039?s=40&v=4"
+                        src={avatar}
                         alt="@IDriuk"
                       />
                       <span className="dropdown-caret"></span>
