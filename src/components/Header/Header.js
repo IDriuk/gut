@@ -31,7 +31,7 @@ class Header extends Component {
           <div className="d-flex flex-justify-between ">
             <div>
               <a className="header-logo-invertocat">
-                <MarkGithub />
+                <MarkGithub size="32"/>
               </a>
             </div>
           </div>
