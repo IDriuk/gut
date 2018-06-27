@@ -13,6 +13,8 @@ class UnderlineNav extends Component {
   }
 
   componentDidMount() {
+    this.props.fetchNavCategoriesCounts();
+
     window.addEventListener('scroll', this.handleScroll);
     this.setState({ offsetLeft: this.nav.offsetLeft})
   }
@@ -27,6 +29,7 @@ class UnderlineNav extends Component {
   }
 
   render() {
+    const { navCategoriesCounts } = this.props;
     const { sticky, offsetLeft } = this.state;
     const displayPlaceholder = sticky ? "block" : "none";
     const navStyle = !sticky ? { position: "static" }
@@ -49,12 +52,7 @@ class UnderlineNav extends Component {
         >
           <nav className="UnderlineNav-body">
             {
-              [
-                ["Overview", null],
-                ["Repositories", 16],
-                ["Stars", 7],
-                ["Followers", 7],
-                ["Following", 2]]
+              navCategoriesCounts
                 .map(([title, counter], index) =>
                   index !== 0 ?
                     <a key={index} className="UnderlineNav-item">

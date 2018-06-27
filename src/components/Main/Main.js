@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './Main.css';
 
-import UnderlineNav from '../UnderlineNav/UnderlineNav';
+import UnderlineNav from '../../containers/UnderlineNavContainer';
 import PinnedRepos from '../../containers/PinnedReposContainer';
 import CalendarGraph from '../CalendarGraph/CalendarGraph';
 
