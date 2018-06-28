@@ -1,28 +1,44 @@
-.pinned-repos-setting-link {
-  font-size: 13px;
-  font-weight: 400;
+.pinned-repos {
+  &-setting-link {
+    font-size: 13px;
+    font-weight: 400;
+  }
+  &-list {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }
 
-.pinned-repos-list {
-  display: flex;
-  list-style: none;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.pinned-repo-item {
-  display: flex;
-  width: 359px;
-}
-
-.pinned-repo-item-content {
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-}
-
-.pinned-repo-desc {
-  flex: 1 0 auto;
+.pinned-repo {
+  &-item {
+    display: flex;
+    width: 359px;
+    &-content {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+    }
+    .pinned-repository-handle {
+      padding-top: 1px;
+      color: #586069;
+      &:hover {
+        cursor: grab;
+      }
+    }
+    &.is-dragging{
+      cursor: grabbing;
+      background-color: #f1f8ff;
+    }
+    &.sortable-ghost {
+      background-color: #f1f8ff;
+      opacity: 0;
+    }
+  }
+  &-desc {
+    flex: 1 0 auto;
+  }
 }
 
 .repo-language-color {
@@ -32,26 +48,4 @@
   width: 12px;
   height: 12px;
   border-radius: 50%;
-}
-
-.pinned-repo-item .pinned-repository-handle {
-  padding-top: 1px;
-  color: #586069;
-}
-
-.pinned-repo-item .pinned-repository-handle:hover {
-  cursor: grab;
-}
-
-.pinned-repo-item.is-dragging{
-  cursor: grabbing;
-}
-
-.pinned-repo-item.is-dragging {
-  background-color: #f1f8ff;
-}
-
-.pinned-repo-item.sortable-ghost {
-  background-color: #f1f8ff;
-  opacity: 0;
 }
