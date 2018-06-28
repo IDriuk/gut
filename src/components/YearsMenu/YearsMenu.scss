@@ -1,0 +1,35 @@
+/* skey: sass, cheatsheet, https://sass-cheatsheet.brunoscopelliti.com/ */
+
+.filter-item {
+  position: relative;
+  display: block;
+  padding: 8px 10px;
+  margin-bottom: 5px;
+  overflow: hidden;
+  font-size: 14px;
+  color: #586069;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: pointer;
+  border-radius: 3px;
+  &:hover {
+    text-decoration: none;
+    background-color: #eaecef;
+  }
+  &.selected {
+    color: #fff;
+    background-color: #0366d6;
+  }
+}
+
+.filter-list {
+  list-style-type: none;
+  &.small {
+    .filter-item {
+      padding: 4px 10px;
+      margin: 0 0 2px;
+      font-size: 12px;
+    }
+  }
+}
