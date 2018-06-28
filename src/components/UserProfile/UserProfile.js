@@ -36,7 +36,7 @@ class UserProfile extends Component {
     return (
       <div className="h-card col-3 float-left pr-3">
 
-        <div className={`user-profile-sticky-bar js-user-profile-sticky-bar ${stickyAvatar ? "is-stuck" : ""}`}>
+        <div className={`user-profile-sticky-bar ${stickyAvatar ? "is-stuck" : ""}`}>
           {/* skey: display table, table-cell */}
           <div className="user-profile-mini-vcard d-table">
             <span className="user-profile-mini-avatar d-table-cell v-align-middle lh-condensed-ultra pr-2">
@@ -48,7 +48,7 @@ class UserProfile extends Component {
                 height={32}
               />
             </span>
-            <span className="d-table-cell v-align-middle lh-condensed js-user-profile-following-mini-toggle">
+            <span className="d-table-cell v-align-middle lh-condensed ">
               <strong>IDriuk</strong>
             </span>
           </div>
