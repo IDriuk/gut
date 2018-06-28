@@ -97,7 +97,10 @@ class Header extends Component {
                 <ul className="user-nav d-flex flex-items-center list-style-none">
                   <li className="dropdown">
                     <span className="d-inline-block  px-2">
-                      <a className="notification-indicator tooltipped">
+                      <a
+                        className="notification-indicator tooltipped tooltipped-s"
+                        aria-label="You have no unread notifications"
+                      >
                         <Bell />
                       </a>
                     </span>
